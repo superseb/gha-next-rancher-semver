@@ -1,0 +1,26 @@
+# action.yml
+name: 'Next Rancher Semver'
+description: 'Generate the next semantic version based on given parameters'
+inputs:
+  prefix:  # id of input
+    description: 'Prefix to use for existing tag'
+    required: true
+    default: ''
+  bump:  # id of input
+    description: 'What part of the version to bump'
+    required: true
+    default: ''
+
+outputs:
+  version: # id of output
+    description: 'The generated next semantic version'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - "-p ${{ inputs.prefix }}"
+    - "-b ${{ inputs.bump }}"
+
+branding:
+  icon: 'arrow-right-circle'
+  color: 'orange'
