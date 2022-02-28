@@ -18,8 +18,10 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - "-p ${{ inputs.prefix }}"
-    - "-b ${{ inputs.bump }}"
+    - "-p"
+    - "${{ inputs.prefix }}"
+    - "-b"
+    - "${{ inputs.bump }}"
 
 branding:
   icon: 'arrow-right-circle'
