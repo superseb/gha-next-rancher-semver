@@ -7,4 +7,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 WORKDIR /app
 
-ENTRYPOINT [ "python", "./get-new-semver.py" ]
+ENTRYPOINT [ "python", "get-new-semver.py" ]
