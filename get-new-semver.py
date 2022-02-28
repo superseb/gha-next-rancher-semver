@@ -50,7 +50,7 @@ def main(argv):
     if next.prerelease != None:
         strnext = str(next).replace('-rc.', '-rc')
     
-    print('v{}'.format(strnext))
+    os.system("echo ::set-output name=version::v{}".format(strnext))
 
 if __name__ == "__main__":
    main(sys.argv[1:])
